@@ -34,10 +34,14 @@ document.getElementById('key-Pad').addEventListener('click', function(event){
 function verifyPin(){
     const pin = document.getElementById('display-pin').value;
     const typed= document.getElementById('typed-numbers').value;
+    const errorMessege = document.getElementById('pin-matched');
+    const successMessege = document.getElementById('wrong-pin');
     if(pin == typed){
-        console.log('yes you write the right pin.')
+        errorMessege.style.display = 'block';
+        successMessege.style.display = 'none';
     }
     else{
-        console.log('sorry! you write the wrong number.')
+        successMessege.style.display = 'block';
+        errorMessege.style.display = 'none';
     }
 };
